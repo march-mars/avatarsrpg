@@ -173,7 +173,7 @@ h1 {
 }
 
 .preview-content img {
-    max-height: 640px;
+    max-height: 1000px;
     object-fit: contain;
     background: white;
     border-radius: 10px;
