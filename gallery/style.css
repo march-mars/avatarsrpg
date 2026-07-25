@@ -1,18 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@font-face {
-    font-family: "Astone Nouvea";
-    src: url("./fonts/Astone-Nouvea.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 :root {
     --bg1: #141419;
-    --bg2: #1d1d29;
+    --bg2: rgba(210, 209, 193, 0.1);
     --bg3: #3a3a55;
     --bg4: #616a75;
     --tx1: #d2d1c1;
+    --acc:#9c7251;
 }
 
 * {
@@ -24,13 +20,59 @@ body {
     padding: 40px;
     background: var(--bg1);
     color: var(--tx1);
-    font-family: Inter, sans-serif;
+    font-family: 'Inter';
+    font-size: 16px;
     height: 100vh;
 }
 
 h1 {
-    font-family: "Astone Nouvea";
-    font-size: 42px;
+    font-family: 'clarendon-wide-sketch';
+    text-transform: uppercase;
+    font-size: 52px;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: 'source-serif-4-variable';
+    font-size:25px;
+    font-style: italic;
+    font-weight:400;
+    margin: 0;
+    padding: 0;
+}
+
+.march-mars span {
+    font-size: 30px;
+    letter-spacing: 10px;
+    color:var(--acc);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    border:1px solid var(--tx1);
+    border-radius: 10px;
+    padding: 30px;
+    min-height: 100%;
+}
+
+.march-mars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    gap:15px;
+    background: var(--bg2);
+    border-radius: 10px;
+    padding:20px;
+    margin-bottom: 20px;
+}
+
+.march-mars img {
+    width:100px;
+    border-radius: 100%;
 }
 
 .toolbar {
@@ -49,12 +91,12 @@ h1 {
 
 #back {
     padding: 10px 16px;
-    background: var(--tx1);
+    background: var(--bg2);
+    color:var(--tx1);
     border:1px solid #0a0605;
     border-radius: 8px;
     cursor: pointer;
     transition: .2s;
-    color: var(--bg2);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
@@ -62,7 +104,7 @@ h1 {
 }
 
 #back:hover {
-    background: var(--bg3);
+    background: var(--acc);
     color: var(--tx1);
 }
 
@@ -84,26 +126,28 @@ h1 {
     width:160px;
     height:160px;
     padding:12px;
+    border:1px solid var(--tx1);
     background:var(--bg2);
-    border:1px solid var(--bg3);
     border-radius:12px;
     cursor:pointer;
     transition:.2s;
 }
 
 .folder:hover {
-    border-color: var(--bg4);
+    border-color: var(--acc);
 }
 
 .folder .name {
-    margin-top:10px;
+    margin-top:0px;
     text-align:center;
     font-size:14px;
     color: var(--tx1);
+    font-style: italic;
 }
 
 .folder-icon {
-    width: 36px;
+    width: 0px;
+    display: none;
 }
 
 .icon {
@@ -173,6 +217,7 @@ h1 {
 }
 
 .preview-content img {
+    max-height: 800px;
     object-fit: contain;
     background: white;
     border-radius: 10px;
