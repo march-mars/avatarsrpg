@@ -217,7 +217,7 @@ h2 {
 }
 
 .preview-content img {
-    max-height: 800px;
+    max-height: 80vh;
     object-fit: contain;
     background: white;
     border-radius: 10px;
