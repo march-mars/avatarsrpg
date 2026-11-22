@@ -3,11 +3,12 @@
 
 
 :root {
-    --bg1: #141419;
-    --bg2: rgba(210, 209, 193, 0.1);
+    --bg1:rgba(235, 230, 220, 1);
+    --bg2: rgba(210, 209, 193, 0.5);
     --bg3: #3a3a55;
     --bg4: #616a75;
-    --tx1: #d2d1c1;
+    --bg5:rgba(241, 241, 241, 0.8);
+    --tx1: rgba(68, 67, 66, 1);
     --acc:#9c7251;
 }
 
@@ -26,11 +27,11 @@ body {
 }
 
 h1 {
-    font-family: 'clarendon-wide-sketch';
-    text-transform: uppercase;
-    font-size: 52px;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-size: calc(100px + 1.5vw);
+    line-height: calc(100px + 1.5vw);;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
 h2 {
@@ -42,32 +43,56 @@ h2 {
     padding: 0;
 }
 
-.march-mars span {
-    font-size: 30px;
-    letter-spacing: 10px;
-    color:var(--acc);
-    margin: 0;
-    padding: 0;
+
+
+.infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap:2px;
+    width: 100%;
+
+    div {
+      background: var(--bg5);
+        padding: 20px;
+        flex-grow: 1;
+        color:rgba(126, 126, 126, 1);
+        font-size: 14px;
+        text-transform: uppercase; 
+        border-top: 1px dashed; 
+    }
+
+    span {
+        background: var(--bg5);
+        padding: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 12px;
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-top: 1px dashed; 
+    }
 }
 
 .container {
-    border:1px solid var(--tx1);
-    border-radius: 10px;
-    padding: 30px;
     min-height: 100%;
 }
 
 .march-mars {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     width:100%;
+    max-width: 1500px;
     gap:15px;
     background: var(--bg2);
     border-radius: 10px;
-    padding:20px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .march-mars p {
